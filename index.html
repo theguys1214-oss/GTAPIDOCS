@@ -19,9 +19,10 @@
 
 <section id="info">
     <h1>Info</h1>
-
+    <h2>Welcome to the docs for GTAPI1<h2>
+    
     <p>
-        Write information about GameTrustAPI here.
+         as of 8/7/2026 it is actively being developed, I figured I would make a doc anyway, this doc shows how to use it for when the backend and SDK is done.
     </p>
 </section>
 
@@ -30,8 +31,17 @@
     <h1>How To Use</h1>
 
     <p>
-        Write setup instructions here.
-    </p>
+        after installing the SDK (unity package), its quite simple. after references, you init your project's slug provided on purchase, to do this you would use
+        <code>GTAPI.init("your-slug")<code>
+        including the slug in production is fine.
+
+            after init, to make a data request you simply use 
+            <code>GTAPI.datax<code>
+
+        x is just a placeholder, you can do data1-5, configurable through request.
+        It returns any info you set it to after it checks  your build and that the request isn't
+        just a spam request.
+    <p>
 </section>
 
 

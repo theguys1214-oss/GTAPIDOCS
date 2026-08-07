@@ -7,45 +7,112 @@
 
 <body>
 
-<div class="sidebar">
-    <h2>Documentation</h2>
+<div class="layout">
 
-    <a href="#info">Info</a>
-    <a href="#how-to-use">How To Use</a>
+    <div class="sidebar">
+        <h2>GT API Docs</h2>
+
+        <a onclick="showPage('info')">Info</a>
+        <a onclick="showPage('how-to-use')">How To Use</a>
+    </div>
+
+
+    <div class="content">
+
+        <section id="info" class="page">
+
+            <h1>GameTrustAPI</h1>
+
+            <p>
+                As of 8/7/2026, GameTrustAPI is actively being developed.
+                This documentation has been created early to explain how the
+                API will work once the backend and SDK are complete.
+            </p>
+
+            <p>
+                This documentation explains the planned usage and features
+                of GameTrustAPI.
+            </p>
+
+        </section>
+
+
+
+        <section id="how-to-use" class="page hidden">
+
+            <h1>How To Use</h1>
+
+            <p>
+                After installing the SDK Unity package and adding the required
+                references, setup is simple.
+            </p>
+
+            <p>
+                Initialize your project using the project slug provided after purchase:
+            </p>
+
+
+            <pre><code>GTAPI.Init("your-slug");</code></pre>
+
+
+            <p>
+                Including the slug in your production build is safe.
+                The slug identifies your project and does not provide direct
+                access to protected data.
+            </p>
+
+
+            <h2>Requesting Data</h2>
+
+            <p>
+                After initialization, data can be requested using:
+            </p>
+
+
+            <pre><code>GTAPI.DataX</code></pre>
+
+
+            <p>
+                The <code>X</code> is a placeholder.
+                Available data fields are:
+            </p>
+
+
+            <ul>
+                <li>Data1</li>
+                <li>Data2</li>
+                <li>Data3</li>
+                <li>Data4</li>
+                <li>Data5</li>
+            </ul>
+
+
+            <p>
+                These fields are configurable per project.
+                Data is only returned after GT API verifies the build
+                and confirms the request is not abusive.
+            </p>
+
+        </section>
+
+
+    </div>
+
 </div>
 
 
-<div class="content">
+<script>
+function showPage(page)
+{
+    document.querySelectorAll(".page").forEach(section =>
+    {
+        section.classList.add("hidden");
+    });
 
-<section id="info">
-    <h1>Info</h1>
-    <h2>Welcome to the docs for GTAPI1<h2>
-    
-    <p>
-         as of 8/7/2026 it is actively being developed, I figured I would make a doc anyway, this doc shows how to use it for when the backend and SDK is done.
-    </p>
-</section>
+    document.getElementById(page).classList.remove("hidden");
+}
+</script>
 
-
-<section id="how-to-use">
-    <h1>How To Use</h1>
-
-    <p>
-        after installing the SDK (unity package), its quite simple. after references, you init your project's slug provided on purchase, to do this you would use
-        <code>GTAPI.init("your-slug")<code>
-        including the slug in production is fine.
-
-            after init, to make a data request you simply use 
-            <code>GTAPI.datax<code>
-
-        x is just a placeholder, you can do data1-5, configurable through request.
-        It returns any info you set it to after it checks  your build and that the request isn't
-        just a spam request.
-    <p>
-</section>
-
-
-</div>
 
 </body>
 </html>

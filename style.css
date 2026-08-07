@@ -1,10 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
 
 
+* {
+    box-sizing: border-box;
+}
+
+
 body {
     margin: 0;
-    background: #061f12;
-    color: #e8f5e9;
+    background: #020b06;
+    color: #d9e8dc;
     font-family: "Inter", Arial, sans-serif;
 }
 
@@ -19,37 +24,45 @@ body {
 
 .sidebar {
 
-    width: 240px;
+    width: 250px;
 
     margin: 25px;
+
     padding: 25px;
 
-    background: #0b2b18;
+    background: #07180d;
+
+    border: 1px solid #123b20;
 
     border-radius: 14px;
 
-    border: 1px solid #174d2d;
+    height: calc(100vh - 50px);
 
-    height: fit-content;
-
-    position: sticky;
-    top: 25px;
 }
 
 
 .sidebar h2 {
+
+    color: white;
+
     margin-top: 0;
-    font-size: 22px;
+
 }
 
 
-.sidebar a {
+.sidebar button {
 
-    display: block;
+    width: 100%;
 
-    color: #55aaff;
+    background: transparent;
 
-    text-decoration: none;
+    border: none;
+
+    text-align: left;
+
+    color: #4da3ff;
+
+    font-size: 17px;
 
     padding: 12px;
 
@@ -57,14 +70,12 @@ body {
 
     cursor: pointer;
 
-    margin-top: 8px;
-
 }
 
 
-.sidebar a:hover {
+.sidebar button:hover {
 
-    background: #123d22;
+    background: #10291a;
 
 }
 
@@ -74,9 +85,9 @@ body {
 
 .content {
 
-    max-width: 900px;
-
     padding: 50px;
+
+    max-width: 900px;
 
 }
 
@@ -85,14 +96,12 @@ h1 {
 
     font-size: 38px;
 
-    margin-top: 0;
-
 }
 
 
 h2 {
 
-    margin-top: 40px;
+    margin-top: 35px;
 
 }
 
@@ -109,48 +118,23 @@ p, li {
 
 /* Code */
 
-code {
-
-    background: #102d1d;
-
-    padding: 4px 8px;
-
-    border-radius: 6px;
-
-    font-family: "JetBrains Mono", Consolas, monospace;
-
-}
-
-
 pre {
 
-    background: #08170e;
+    background: #050d08;
+
+    border: 1px solid #123b20;
 
     padding: 18px;
 
     border-radius: 10px;
 
-    border: 1px solid #174d2d;
-
-    overflow-x: auto;
-
 }
 
 
-pre code {
+code {
 
-    background: none;
+    font-family: Consolas, monospace;
 
-    padding: 0;
-
-}
-
-
-
-/* Pages */
-
-.hidden {
-
-    display: none;
+    color: #9ee7b2;
 
 }

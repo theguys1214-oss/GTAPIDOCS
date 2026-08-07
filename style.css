@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #3ca65c;
+    color: white;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 220px;
+    height: 100vh;
+
+    background: #1f6b38;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.sidebar a {
+    display: block;
+
+    color: #5da9ff;
+    text-decoration: none;
+
+    margin: 15px 0;
+    font-size: 18px;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+
+.content {
+    margin-left: 270px;
+    padding: 40px;
+}
+
+
+section {
+    min-height: 500px;
+    padding-bottom: 50px;
+}
+
+
+h1 {
+    font-size: 36px;
+}
+
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}

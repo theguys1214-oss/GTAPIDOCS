@@ -272,7 +272,40 @@ Data is returned after GT API verifies the build and confirms
 the request is not abusive.
 </p>
 
+<h2>Values returned</h2>
 
+<p>Besides returning normal data, the API will return multiple codes for different things you can build on.</p>
+
+<ul>
+    <li>1</li>
+    <p>Common, one of the checks failed.</p>
+
+    <li>2</li>
+    <p>The public endpoint couldn't reach any of the DBs. DM the developer, as this could be serious.</p>
+
+    <li>3</li>
+    <p>Uncommon, the device is temporarily banned for failing critical checks repeatedly.</p>
+
+    <li>4</li>
+    <p>Uncommon, the device has been permanently banned by the automated system for repeatedly failing critical checks (more info below).</p>
+</ul>
+
+<p>you can build around these codes inside the sdk, more info provided soon.</p>
+<h2>HOW TO APPEAL A PLAYER DEVICE BAN.</h2>
+<p>Device bans are serious although rare, they prevent one device from playing any game using the GT API.</p>
+<p>Device bans are issued from the automated system through a strike system. To appeal a player ban as either a player or developer, contact the GT API team.</p>
+
+<ul>
+    <li>5 strikes</li>
+    <p>5 day temp ban from services.</p>
+    
+    <li>10 strikes</li>
+    <p>1 week temp ban from services.</p>
+
+    <li>20 strikes</li>
+    <p>3 week temp ban from services.</p>
+</ul>
+   <strong>Past 20  strikes will be permanant but you may appeal. Strikes are a add system, 5 stikes is one temp ban, those strikes remain for the month.</strong> 
 </div>
 
 
